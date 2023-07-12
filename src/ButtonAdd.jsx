@@ -1,15 +1,23 @@
 import {useState} from 'react';
 // Quand on utilise un useState, il faut l'importer là où on l'utilise.
 
-export function ButtonAdd() {
+export function ButtonAdd({ajoutTodo}) {
+
 
  const [nouveauTodo, setNouveauTodo] = useState("");
 
-
   // comportement
-const handleSubmit = (event) => {
+  const handleSubmit = (event) => {
   event.preventDefault();
   // Empèche le rechargement de la page après l'envoi des données (click).
+  ajoutTodo(nouveauTodo);
+  
+  setNouveauTodo("")
+
+
+  /* const id = new Date().getTime();
+  const nom = nouveauTodo;
+  newTodosCopy.push({id: id, nom: nom}); */
 }
 const handleChange = (event) => {
   setNouveauTodo(event.target.value)

@@ -1,19 +1,18 @@
 
 
-export const List = (props) => {
+export const List = ({todosMap}) => {
+    // todosMap = tableau dans App.jsx
 
     return (
         <div className="listDiv">
             <h3>Todos</h3>
             <ul className="ulist">
-                <li htmlFor="">
-                    <input type="checkbox" />
-                    Changer l'eau des toilettes
-                </li>
-                <li>
-                    <input type="checkbox" />
-                    Sourire aux murs
-                </li>
+                {todosMap.map((todo, index) => (
+                    <li key={index}>
+                          <input type="checkbox" />
+                        {todo.text}
+                    </li>
+                ))}           
             </ul>
         </div>
         )
