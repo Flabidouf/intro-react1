@@ -1,27 +1,22 @@
 import {useState} from 'react';
 // Quand on utilise un useState, il faut l'importer là où on l'utilise.
 
-export function ButtonAdd({ajoutTodo}) {
+export function ButtonAdd({parameterButtonAdd}) {
 
 
  const [nouveauTodo, setNouveauTodo] = useState("");
+ // Est-ce que c'est le même useState que sur App.jsx ?
 
   // comportement
   const handleSubmit = (event) => {
   event.preventDefault();
   // Empèche le rechargement de la page après l'envoi des données (click).
-  ajoutTodo(nouveauTodo);
-  
+  parameterButtonAdd(nouveauTodo);
   setNouveauTodo("")
-
-
-  /* const id = new Date().getTime();
-  const nom = nouveauTodo;
-  newTodosCopy.push({id: id, nom: nom}); */
+  
 }
 const handleChange = (event) => {
   setNouveauTodo(event.target.value)
-  // Reprend la valeur de l'input sur lequel il est appelé. Ici l'input (au travers du onChange)
   
 }
 

@@ -4,6 +4,12 @@
 
 }
 
+body {
+  
+  background-repeat: repeat;
+  background-size: 200px;
+  
+}
 .ulist {
   display:flex;
   flex-direction: column;
@@ -17,12 +23,6 @@ input {
 }
 
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
 .card {
   display: flex;
   flex-direction: column;
@@ -30,6 +30,15 @@ input {
   flex-wrap: wrap;
 }
 
-.read-the-docs {
-  color: #888;
+
+
+
+.button {
+  margin-left: 15px;
+}
+
+.listDiv {
+  border: 5px solid blue;
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
 }
